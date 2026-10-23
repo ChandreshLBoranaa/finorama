@@ -1,0 +1,14 @@
+[project]
+name = "finorama"
+version = "0.1.0"
+requires-python = ">=3.11,<3.13"
+dependencies = ["openai>=1.40", "python-dotenv>=1.0", "requests>=2.31",
+                "pandas>=2.2", "jupyter>=1.0", "ipykernel>=6.29"]
+
+[dependency-groups]
+m1 = ["transformers>=4.51", "accelerate>=1.0", "torch>=2.4"]   # Lab 1.1 local LLM
+m2 = ["langchain>=0.3", "langchain-openai>=0.2"]                # ReAct, tool calling
+m3 = ["chromadb>=0.5", "sentence-transformers>=3.0"]            # RAG, vector DB, MMR
+m4 = ["crewai>=0.80"]                                           # Tree-of-Thought
+m5 = ["langgraph>=0.2"]                                         # multi-agent workflows
+mcp = ["mcp>=1.0"]                                              # Model Context Protocol
